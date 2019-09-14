@@ -1,0 +1,17 @@
+nav ul li:hover {
+    background-color: yellow;
+ }
+
+#sidenav-overlay {
+    z-index: 9
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }

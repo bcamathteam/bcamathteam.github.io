@@ -8,6 +8,10 @@ nav ul li:hover {
     background-color: yellow;
  }
 
+ .sidenav ul li:hover {
+    background-color: yellow;
+ }
+
 #sidenav-overlay {
     z-index: 9
 }
