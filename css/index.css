@@ -1,0 +1,17 @@
+nav {
+    z-index: 10;
+    position: relative;
+    opacity: 0.6;
+}
+
+nav ul li:hover {
+    background-color: yellow;
+ }
+
+#sidenav-overlay {
+    z-index: 9
+}
+
+.slides img {
+    filter: brightness(50%);
+  }
