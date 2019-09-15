@@ -1,0 +1,10 @@
+{
+    "_comment": "KEEP UPDATES IN CHRONOLOGICAL ORDER; latest update will have 'new' tag on its card",
+    "updates": [
+        {
+            "title": "Welcome",
+            "date": "9/14/19",
+            "content": "Thank you to all who came to our first meeting on September 14. To view the lecture notes and homework problems from the meeting, visit the <a href=\"/archive.html\">Archive</a> page. Our next meeting will take place in two weeks (visit the <a href=\"/schedule.html\">Schedule</a> page). Hope to see you there!"
+        }
+    ]
+}
