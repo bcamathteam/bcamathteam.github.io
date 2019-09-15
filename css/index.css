@@ -6,11 +6,18 @@ nav {
 
 nav ul li:hover {
     background-color: yellow;
- }
+}
 
- .sidenav ul li:hover {
+.sidenav ul li:hover {
     background-color: yellow;
- }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Computer Modern Sans", sans-serif;
+}
 
 #sidenav-overlay {
     z-index: 9
@@ -18,4 +25,4 @@ nav ul li:hover {
 
 .slides img {
     filter: brightness(50%);
-  }
+}
