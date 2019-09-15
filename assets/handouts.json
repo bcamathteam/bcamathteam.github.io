@@ -1,0 +1,16 @@
+{
+    "handouts" : [
+        {
+            "title": "Advanced Algebraic Manipulations",
+            "advanced" : true,
+            "date" : "9/14/19",
+            "file" : "A_team_alg_manipulations.pdf"
+        },
+        {
+            "title": "Algebraic Manipulations for AMC",
+            "advanced" : false,
+            "date" : "9/14/19",
+            "file" : "AMC_alg_manipulations.pdf"
+        }
+    ]
+}
