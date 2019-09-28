@@ -2,7 +2,7 @@
     $(function () {
 
         
-        $.getJSON('/assets/handouts.json', function(data) {
+        $.getJSON('https://gist.githubusercontent.com/dknj11902/9c145d4aa2b177d0671555e016666d2d/raw/handouts.json', function(data) {
             var latest_count = 0;
             var latest_date = "";
             $.each(data["handouts"].reverse(), function(i,v) {
