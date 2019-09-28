@@ -3,7 +3,7 @@
         $.getJSON('https://gist.githubusercontent.com/dknj11902/9c145d4aa2b177d0671555e016666d2d/raw/updates.json', function(data) {         
             $.each(data["updates"].reverse(), function(i,v) {
                 var new_tr = `<div class="col s12 m6">
-                <div class="card yellow lighten-2 z-depth-3 ">
+                <div class="card orange lighten-3 z-depth-3 ">
                     <div class="card-content black-text">
                         <span class="card-title">`+v["title"] + " (" + v["date"] + ")" + (i == 0 ? "<span class=\"new badge\"></span>" : "") + `</span>
                         <p>`+v["content"]+`</p>`
