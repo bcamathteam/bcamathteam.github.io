@@ -6,8 +6,9 @@
         handoutsRef.once('value', function (snapshot) {
             var latest_count = 0;
             var latest_date = "";
+            var counter = 0;
             snapshot.forEach(function (childSnapshot) {
-                var i = childSnapshot.key;
+                var i = counter;
                 var v = childSnapshot.val();
                 if (i === 0) {
                     latest_date = v["date"];
@@ -20,6 +21,7 @@
                 }
                 var new_tr = "<tr><td>" + v["date"] + "</td><td><a href=\"" + v["file"] + "\" target=\"_blank\">" + v["title"] + "</a>" + (v["advanced"] ? "&nbsp;&nbsp;<span class=\"new badge red\" data-badge-caption=\"Advanced\"></span>" : "") + "</td></tr>";
                 $(".handouts-table tbody").prepend(new_tr);
+                counter++;
             });
             $(".handouts-table tbody > tr").each(function () {
                 var link = $(this).find("a");

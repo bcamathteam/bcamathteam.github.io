@@ -1,18 +1,28 @@
 nav ul li:hover {
-    background-color: yellow;
- }
+  background-color: yellow;
+}
 
 #sidenav-overlay {
-    z-index: 9
+  z-index: 9
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: "Computer Modern Sans", sans-serif;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Computer Modern Sans", sans-serif;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
+
+.alert {
+  color: red;
+}
+
+#admin-logout-btn {
+  cursor: pointer;
+}
+
+textarea.materialize-textarea{min-height: 6rem;}

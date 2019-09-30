@@ -61,6 +61,72 @@
         <div id="updates">
             <div class="container">
                 <h3>Updates</h3>
+                <div class="row admin-panel hide">
+                    <div id="adminmodal" class="modal">
+                        <div class="modal-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" id="update-title" class="validate">
+                                    <label for="update-title">Title</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="update-text" class="materialize-textarea"></textarea>
+                                    <label for="update-text">Content</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <input id="update-date" type="text" class="datepicker">
+                                    <label for="update-date">Date</label>
+                                </div>
+                                <div class="file-field input-field col s8">
+                                    <div class="btn">
+                                        <i class="material-icons">attach_file</i>
+                                        <input id="update-files" type="file" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Attach files here">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12"><span>Please do not attach files which have previously been uploaded with the same name.</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <span class="alert hide"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" id="admin-submit" type="submit"
+                                class="waves-effect waves-green btn-flat">Submit</a>
+                            <a href="#!" id="admin-close"
+                                class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                        </div>
+                    </div>
+                    <div id="adminmodal-delete" class="modal">
+                        <div class="modal-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col s12 input-field">
+                                        <select></select>
+                                        <label>Select update to delete</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" id="admin-delete" type="submit"
+                                class="waves-effect waves-green btn-flat">Delete</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                    </div>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal">Add update</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal-delete">Delete update</a>
+                </div>
                 <div class="row updates-row">
                     <div class="container preloader-container center-align">
                         <div class="preloader-wrapper big active">
@@ -239,6 +305,31 @@
                     Team Championship (Beijing, 2013; Seoul, 2016; Bulgaria, 2018)</p>
             </div>
         </div>
+        <div id="loginmodal" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="email" id="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <span class="alert hide"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="waves-effect waves-green btn-flat" id="admin-login" type="submit">Login</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="admin-login-close">Cancel</a>
+            </div>
+        </div>
         <br>
         <br>
         <br>
@@ -273,7 +364,9 @@
         </div>
         <div class="footer-copyright grey darken-4">
             <div class="container">
-                &copy; 2019 &bull; Bergen County Academies
+                &copy; 2019 &bull; Bergen County Academies <span style="float:right;"><a id="admin-login-btn"
+                        href="#loginmodal" class="modal-trigger">Admin login</a></span><a id="admin-logout-btn"
+                    class="hide" style="float:right;">Admin logout</a></span>
             </div>
         </div>
     </footer>
@@ -284,6 +377,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
