@@ -1,6 +1,8 @@
 (function ($) {
     $(function () {
-        $('.modal').modal();
+        $('.modal').modal({
+            dismissible: false
+        });
         $('.datepicker').datepicker({
             format: 'mm/dd/yy'
         });
@@ -109,6 +111,7 @@
                     }
                     var newPostKey = handoutsRef.push().key;
                     handoutsRef.child(newPostKey).set(updateData);
+                    // M.toast({ html: 'Please refresh the page.' })
                     handoutsRef.once('value', refreshUpdates);
                 }
 
@@ -123,9 +126,27 @@
                     var date = $("#update-date").val();
                     var file = $("#update-files").prop("files")[0];
                     if (title.length > 0 && date.length > 0 && file != null) {
-                        filesRef.child(file.name).put(file);
-                        postUpdate(title, date, $("#advanced-checked").is(":checked"), file.name);
-                        $("#adminmodal").modal('close');
+                        var preload = `<div class="container"><div class="preloader-wrapper active center-align">
+                        <div class="spinner-layer spinner-red-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div></div>`;
+                        $("#adminmodal .modal-content").empty();
+                        $("#adminmodal .modal-content").append(preload);
+                        $("#admin-submit").addClass("disabled");
+                        $("#admin-close").addClass("disabled");
+                        filesRef.child(file.name).put(file).then(function (param) {
+                            postUpdate(title, date, $("#advanced-checked").is(":checked"), file.name);
+                            $("#adminmodal").modal('close');
+                        }).catch(function (error) {
+                            M.toast({ html: 'An error occurred. Please refresh the page.' });
+                        });
                     } else $("#adminmodal .alert").removeClass("hide").text("There are empty fields.");
 
                     clearAddUpdateModal();

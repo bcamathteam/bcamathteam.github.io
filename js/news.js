@@ -1,6 +1,8 @@
 (function ($) {
     $(function () {
-        $('.modal').modal();
+        $('.modal').modal({
+            dismissible: false
+        });
         $('.datepicker').datepicker({
             format: 'mm/dd/yy'
         });
@@ -110,6 +112,7 @@
                     }
                     var newPostKey = updatesRef.push().key;
                     updatesRef.child(newPostKey).set(updateData);
+                    // M.toast({ html: 'Please refresh the page.' })
                     updatesRef.once('value', refreshUpdates);
                 }
 
@@ -126,13 +129,39 @@
                     var date = $("#update-date").val();
                     var files = $("#update-files").prop("files");
                     var file_names = [];
-                    $.each(files, function (i, v) {
-                        filesRef.child(v.name).put(v);
-                        file_names.push(v.name);
-                    });
+
                     if (title.length > 0 && content.length > 0 && date.length > 0) {
-                        postUpdate(title, content, date, file_names);
-                        $("#adminmodal").modal('close');
+                        var preload = `<div class="container"><div class="preloader-wrapper active center-align">
+                        <div class="spinner-layer spinner-red-only">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div></div>`;
+                        $("#adminmodal .modal-content").empty();
+                        $("#adminmodal .modal-content").append(preload);
+                        $("#admin-submit").addClass("disabled");
+                        $("#admin-close").addClass("disabled");
+                        var put_files = async function () {
+                            for (var i = 0; i < files.length; ++i) {
+                                v = files[i];
+                                await filesRef.child(v.name).put(v).then(function (param) {
+                                    file_names.push(v.name);
+                                }).catch(function (error) {
+                                    M.toast({ html: 'An error has occurred. Please refresh the page.' })
+                                });
+                            }
+                        };
+                        put_files().then(function () {
+                            postUpdate(title, content, date, file_names);
+                            $("#adminmodal").modal('close');
+                        }).catch(function () {
+                            M.toast({ html: 'An error has occurred. Please refresh the page.' })
+                        });
                     } else $("#adminmodal .alert").removeClass("hide").text("There are empty fields.");
 
                     clearAddUpdateModal();
