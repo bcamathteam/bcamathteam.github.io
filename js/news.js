@@ -33,7 +33,7 @@
                     if (files[div_id]) {
                         $.each(files[div_id], function (ii, vv) {
                             filesRef.child(vv).getDownloadURL().then(function (url) {
-                                var btn = `<a target="_blank" href="` + url + `" class="waves-effect waves-light btn"><i class="material-icons left">file_download</i>` + vv + `</a>`;
+                                var btn = `<a target="_blank" href="` + url + `" class="waves-effect black-text yellow darken-3 waves-light btn"><i class="material-icons left">file_download</i>` + vv + `</a>`;
                                 current_div.find('.card-content').append(btn);
                             });
                         });

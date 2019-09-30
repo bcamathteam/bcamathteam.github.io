@@ -26,3 +26,11 @@ main {
 }
 
 textarea.materialize-textarea{min-height: 6rem;}
+
+.update-link:hover {
+  background: rgba(208, 208, 208, 0.5);
+}
+
+.update-link {
+  transition: background 0.3s ease;
+}

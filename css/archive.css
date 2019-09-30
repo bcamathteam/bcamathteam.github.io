@@ -29,4 +29,14 @@ thead {
   cursor: pointer;
 }
 
-textarea.materialize-textarea{min-height: 6rem;}
+textarea.materialize-textarea {
+  min-height: 6rem;
+}
+
+.handout-link:hover {
+  background: rgba(208, 208, 208, 0.44);
+}
+
+.handout-link {
+  transition: background 0.3s ease;
+}

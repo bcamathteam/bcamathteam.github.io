@@ -27,7 +27,7 @@
                     latest_count = 1;
                     latest_date = v["date"];
                 }
-                var new_tr = "<tr data-id=\"" + childSnapshot.key + "\"><td>" + v["date"] + "</td><td><a href=\"" + v["file"] + "\" target=\"_blank\">" + v["title"] + "</a>" + (v["advanced"] ? "&nbsp;&nbsp;<span class=\"new badge red\" data-badge-caption=\"Advanced\"></span>" : "") + "</td></tr>";
+                var new_tr = "<tr data-id=\"" + childSnapshot.key + "\"><td>" + v["date"] + "</td><td><a href=\"" + v["file"] + "\" target=\"_blank\" class=\"handout-link\">" + v["title"] + "</a>" + (v["advanced"] ? "&nbsp;&nbsp;<span class=\"new badge red\" data-badge-caption=\"Advanced\"></span>" : "") + "</td></tr>";
                 $(".handouts-table tbody").prepend(new_tr);
                 counter++;
             });
