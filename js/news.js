@@ -37,17 +37,18 @@
                         });
                     }
                 }
-                $("#adminmodal-delete select").empty();
-                $(".updates-row > div").each(function () {
-                    var title = $(this).find(".card-title").text();
-                    var dataid = $(this).attr("data-id");
-                    var option = $("<option></option>");
-                    option.attr("value", dataid);
-                    option.text(title);
-                    $("#adminmodal-delete select").append(option);
-                });
-                $('#adminmodal-delete select').formSelect();
             });
+
+            $("#adminmodal-delete select").empty();
+            $(".updates-row > div").each(function () {
+                var title = $(this).find(".card-title").text();
+                var dataid = $(this).attr("data-id");
+                var option = $("<option></option>");
+                option.attr("value", dataid);
+                option.text(title);
+                $("#adminmodal-delete select").append(option);
+            });
+            $('#adminmodal-delete select').formSelect();
 
             $(".preloader-container").remove();
             $("#results").removeClass("hide");
@@ -57,7 +58,7 @@
         $("#admin-login").click(function () {
             var userEmail = $("#email").val();
             var userPass = $("#password").val();
-            
+
             firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -133,7 +134,7 @@
                         postUpdate(title, content, date, file_names);
                         $("#adminmodal").modal('close');
                     } else $("#adminmodal .alert").removeClass("hide").text("There are empty fields.");
-                    
+
                     clearAddUpdateModal();
                 });
 
@@ -176,7 +177,6 @@
                 $("#admin-login-btn").removeClass("hide");
                 $("#loginmodal").removeClass("hide");
                 $("#admin-logout-btn").addClass("hide");
-                console.log("logged out");
             }
         }); email - password.html
     }); // end of document ready

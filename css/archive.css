@@ -20,3 +20,13 @@ main {
 thead {
   font-weight: bold;
 }
+
+.alert {
+  color: red;
+}
+
+#admin-logout-btn {
+  cursor: pointer;
+}
+
+textarea.materialize-textarea{min-height: 6rem;}
