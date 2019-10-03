@@ -14,19 +14,19 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Archive | BCA Math Team</title>
+    <title>News | BCA Math Team</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/archive.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/updates.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
     <header>
-        <nav class="black" role="navigation">
+        <nav class="black nav-extended" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo"><img
                         src="/images/bca_logo.png" height="28px"> Math Team</a>
                 <ul class="right hide-on-med-and-down">
@@ -52,22 +52,8 @@
         </ul>
     </header>
     <main>
-        <!-- FIND GOOD PICTURES!!! -->
-        <!-- <div class="parallax-container">
-            <div class="parallax"><img src="/images/math_papers.jpg" alt="Math team papers"></div>
-        </div> -->
         <div class="container">
-            <h3>Archive</h3>
-
-            This archive will contain all past handouts and other materials from meetings.
-
-            <h4>Handouts</h4>
-
-            <blockquote>
-                Advanced handouts are geared toward experienced students in math competitions (preferably AIME
-                qualification).
-            </blockquote>
-
+            <h3>Updates</h3>
             <div class="row admin-panel hide">
                 <div id="adminmodal" class="modal">
                     <div class="modal-content">
@@ -78,30 +64,28 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s6">
+                            <div class="input-field col s12">
+                                <textarea id="update-text" class="materialize-textarea"></textarea>
+                                <label for="update-text">Content</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
                                 <input id="update-date" type="text" class="datepicker">
                                 <label for="update-date">Date</label>
                             </div>
-                            <div class="input-field col s6">
-                                <label>
-                                    <input id="advanced-checked" type="checkbox" class="filled-in"/>
-                                    <span>Advanced</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="file-field input-field col s12">
+                            <div class="file-field input-field col s8">
                                 <div class="btn">
                                     <i class="material-icons">attach_file</i>
-                                    <input id="update-files" type="file">
+                                    <input id="update-files" type="file" multiple>
                                 </div>
                                 <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Attach file here">
+                                    <input class="file-path validate" type="text" placeholder="Attach files here">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col s12"><span>Please do not attach a file which has previously been uploaded
+                            <div class="col s12"><span>Please do not attach files which have previously been uploaded
                                     with the same name.</span></div>
                         </div>
                         <div class="row">
@@ -122,7 +106,7 @@
                             <div class="row">
                                 <div class="col s12 input-field">
                                     <select></select>
-                                    <label>Select handout to delete</label>
+                                    <label>Select update to delete</label>
                                 </div>
                             </div>
                         </div>
@@ -133,31 +117,30 @@
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                     </div>
                 </div>
-                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal">Add handout</a>
-                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal-delete">Delete handout</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal">Add update</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal-delete">Delete update</a>
             </div>
-            <table class="handouts-table striped">
-                <thead>
-                    <tr>
-                        <td>Date</td>
-                        <td>Title</td>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-            <div class="progress">
-                <div class="indeterminate"></div>
+            <div class="row updates-row">
+                <div class="container preloader-container center-align">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <h4>JHMMC</h4>
-
-            In addition to our handouts, the math team is also responsible for writing all the problems to the Joe
-            Holbrook Memorial Math Competition (JHMMC), an annual math competition for elementary and middle schoolers
-            in 4th to 8th grade. To view our past written problems and solutions, please visit the <a
-                class="handout-link" href="https://holbrook.bergen.org/archive">Archive</a> page of the <a
-                href="https://holbrook.bergen.org/" class="handout-link">JHMMC website</a>.
+            <p></p>
         </div>
+
+
         <div id="loginmodal" class="modal">
             <div class="modal-content">
                 <div class="row">
@@ -217,9 +200,9 @@
         </div>
         <div class="footer-copyright grey darken-4">
             <div class="container">
-                &copy; 2019 &bull; Bergen County Academies<span style="float:right;"><a id="admin-login-btn"
-                        href="#loginmodal" class="modal-trigger hide handout-link">Admin login</a></span><a id="admin-logout-btn"
-                    class="hide handout-link" style="float:right;">Admin logout</a></span>
+                &copy; 2019 &bull; Bergen County Academies <span style="float:right;"><a id="admin-login-btn"
+                        href="#loginmodal" class="modal-trigger hide update-link">Admin login</a></span><a
+                    id="admin-logout-btn" class="hide update-link" style="float:right;">Admin logout</a></span>
             </div>
         </div>
     </footer>
@@ -249,7 +232,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/init.js"></script>
-    <script src="/js/archive.js"></script>
+    <script src="/js/updates.js"></script>
 </body>
 
 </html>

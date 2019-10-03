@@ -159,6 +159,45 @@
                         put_files().then(function () {
                             postUpdate(title, content, date, file_names);
                             $("#adminmodal").modal('close');
+                            $("#adminmodal .modal-content").empty();
+                            var form = `<div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" id="update-title" class="validate">
+                                <label for="update-title">Title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="update-text" class="materialize-textarea"></textarea>
+                                <label for="update-text">Content</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="update-date" type="text" class="datepicker">
+                                <label for="update-date">Date</label>
+                            </div>
+                            <div class="file-field input-field col s8">
+                                <div class="btn">
+                                    <i class="material-icons">attach_file</i>
+                                    <input id="update-files" type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Attach files here">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12"><span>Please do not attach files which have previously been uploaded with the same name.</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <span class="alert hide"></span>
+                            </div>
+                        </div>`;
+                            $("#adminmodal .modal-content").append(form);
+                            $("#admin-submit").removeClass("disabled");
+                            $("#admin-close").removeClass("disabled");
                         }).catch(function () {
                             M.toast({ html: 'An error has occurred. Please refresh the page.' })
                         });
