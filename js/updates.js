@@ -17,10 +17,10 @@
                 var i = counter;
                 var v = childSnapshot.val();
                 var new_tr = `<div class="col s12 m6" data-id="` + childSnapshot.key + `">
-                <div class="card orange lighten-3 z-depth-2 hoverable">
+                <div class="card medium orange lighten-3 z-depth-2 hoverable">
                     <div class="card-content black-text">
                         <span class="card-title">`+ v["title"] + " (" + v["date"] + ")" + (i == snapshot.numChildren() - 1 ? "<span class=\"new badge\"></span>" : "") + `</span>
-                        <p>`+ v["content"] + `</p>`
+                        <div class="scrollbox"><p>`+ v["content"] + `</p></div>`
                 if (v["files"]) files[childSnapshot.key] = v["files"];
                 new_tr += `</div></div></div>`;
                 $(".updates-row").prepend(new_tr);
@@ -34,7 +34,8 @@
                         $.each(files[div_id], function (ii, vv) {
                             filesRef.child(vv).getDownloadURL().then(function (url) {
                                 var btn = `<a target="_blank" href="` + url + `" class="waves-effect black-text yellow darken-3 waves-light btn"><i class="material-icons left">file_download</i>` + vv + `</a>`;
-                                current_div.find('.card-content').append(btn);
+                                $(btn).insertAfter(current_div.find('.card-content .card-title'));
+                                // current_div.find('.card-content').prepend(btn);
                             });
                         });
                     }

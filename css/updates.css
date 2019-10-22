@@ -34,3 +34,24 @@ textarea.materialize-textarea{min-height: 6rem;}
 .update-link {
   transition: background 0.3s ease;
 }
+.scrollbox {
+  overflow-y: scroll;
+  height: 300px;
+}
+.scrollbox::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scrollbox::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.scrollbox::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #ffcc80; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, .5);
+}
