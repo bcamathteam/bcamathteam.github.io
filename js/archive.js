@@ -1,35 +1,35 @@
 (function ($) {
     $(function () {
+        var numPerPage = 5;
         $('.modal').modal({
             dismissible: false
         });
         $('.datepicker').datepicker({
-            format: 'mm/dd/yy'
+            format: 'mm/dd/yyyy'
         });
         var handoutsRef = firebase.database().ref('handouts/');
         var filesRef = firebase.storage().ref('handouts/');
-
         function refreshUpdates(snapshot) {
             $(".handouts-table tbody").empty();
             $(".handouts-table thead .badge").remove();
-            var latest_count = 0;
-            var latest_date = "";
-            var counter = 0;
+            var table_rows = [];
+            var count = 0;
             snapshot.forEach(function (childSnapshot) {
-                var i = counter;
                 var v = childSnapshot.val();
-                if (i === 0) {
-                    latest_date = v["date"];
-                }
-                if (v["date"] === latest_date) {
-                    latest_count++;
-                } else {
-                    latest_count = 1;
-                    latest_date = v["date"];
-                }
-                var new_tr = "<tr data-id=\"" + childSnapshot.key + "\"><td>" + v["date"] + "</td><td><a href=\"" + v["file"] + "\" target=\"_blank\" class=\"handout-link\">" + v["title"] + "</a>" + (v["advanced"] ? "&nbsp;&nbsp;<span class=\"new badge red\" data-badge-caption=\"Advanced\"></span>" : "") + "</td></tr>";
-                $(".handouts-table tbody").prepend(new_tr);
-                counter++;
+                var new_tr = "<tr data-id=\"" + childSnapshot.key + "\"><td>" + v["date"] + "</td><td><a href=\"" + v["file"] + "\" target=\"_blank\" class=\"handout-link\">" + v["title"] + "</a>" + (v["advanced"] ? "&nbsp;&nbsp;<span class=\"new badge red\" data-badge-caption=\"Advanced\"></span>" : "");
+                // $(".handouts-table tbody").prepend(new_tr);
+                var tr_obj = new Object();
+                tr_obj.data = new_tr;
+                tr_obj.date = v["date"];
+                table_rows.push(tr_obj);
+                count++;
+            });
+            table_rows.sort(function (a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
+            var latest_date = table_rows[0].date;
+            table_rows.forEach(function (item, index) {
+                $(".handouts-table tbody").append(item.data + (item.date == latest_date ? "&nbsp;&nbsp;<span class=\"new badge\"></span>" : "") + "</td></tr>");
             });
             $(".handouts-table tbody > tr").each(function () {
                 var link = $(this).find("a");
@@ -38,9 +38,6 @@
                     link.attr("href", url);
                 });
             });
-            var new_badge = "&nbsp;&nbsp;<span class=\"new badge\">" + latest_count + "</span>";
-            $('.handouts-table thead tr td:nth-of-type(2)').html($('.handouts-table thead tr td:nth-of-type(2)').html() + new_badge);
-
             $("#adminmodal-delete select").empty();
             $(".handouts-table tbody > tr").each(function () {
                 var data_id = $(this).attr("data-id");
@@ -51,6 +48,21 @@
                 $("#adminmodal-delete select").append(option);
             });
             $('#adminmodal-delete select').formSelect();
+            if (count % numPerPage != 0) {
+                var numEntriesLeft = -(count % numPerPage) + numPerPage;
+                for (var i =0; i< numEntriesLeft; i++){
+                    $(".handouts-table tbody").append(`<tr style="display: table-row; visibility: hidden;"><td>Filler</td><td>Filler</td></tr>`);
+                }
+            }
+            $(".handouts-table").pageMe({
+                pagerSelector: '#myPager',
+                activeColor: 'black',
+                prevText: 'Previous',
+                nextText: 'Next',
+                showPrevNext: true,
+                hidePageNumbers: false,
+                perPage: numPerPage
+            });
             $(".progress").remove();
 
         }

@@ -84,7 +84,7 @@
                             </div>
                             <div class="input-field col s6">
                                 <label>
-                                    <input id="advanced-checked" type="checkbox" class="filled-in"/>
+                                    <input id="advanced-checked" type="checkbox" class="filled-in" />
                                     <span>Advanced</span>
                                 </label>
                             </div>
@@ -146,6 +146,10 @@
                 <tbody>
                 </tbody>
             </table>
+            <div class="col-md-12 center text-center pagination-div">
+                <!-- <span class="left" id="total_reg"></span> -->
+                <ul class="pagination pager" id="myPager"></ul>
+            </div>
             <div class="progress">
                 <div class="indeterminate"></div>
             </div>
@@ -218,8 +222,8 @@
         <div class="footer-copyright grey darken-4">
             <div class="container">
                 &copy; 2019 &bull; Bergen County Academies<span style="float:right;"><a id="admin-login-btn"
-                        href="#loginmodal" class="modal-trigger hide handout-link">Admin login</a></span><a id="admin-logout-btn"
-                    class="hide handout-link" style="float:right;">Admin logout</a></span>
+                        href="#loginmodal" class="modal-trigger hide handout-link">Admin login</a></span><a
+                    id="admin-logout-btn" class="hide handout-link" style="float:right;">Admin logout</a></span>
             </div>
         </div>
     </footer>
@@ -249,6 +253,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/init.js"></script>
+    <script type="text/javascript" src="/js/pagination.js"></script>
     <script src="/js/archive.js"></script>
 </body>
 
