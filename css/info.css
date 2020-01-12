@@ -1,5 +1,11 @@
-nav ul li:hover {
-  background-color: rgba(255, 255, 0, 0.7);
+nav ul> li:hover {
+  background-color: rgba(255, 255, 0, 1);
+}
+
+nav ul li a:hover {
+  color: black;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 
 #sidenav-overlay {
@@ -43,10 +49,17 @@ h3 {
 
 .dropdown-trigger {
   cursor: default;
+  color: white;
+  background-color: black;
 }
 
 #nav-dropdown li:hover {
-  background-color: rgba(255, 255, 0, 0.8);
+  background-color: rgba(255, 255, 0, 1);
+}
+#nav-dropdown li a:hover {
+  color: black;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 
 main {

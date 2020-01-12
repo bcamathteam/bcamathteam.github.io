@@ -12,26 +12,53 @@ nav {
   background-color: #ffff00 !important;
 }
 
-nav ul li:hover {
+.regular:hover {
   background-color: rgba(255, 255, 0, 0.7);
 }
 
-.sidenav ul li:hover {
-  background-color: yellow;
+
+.regular a:hover {
+  color: black;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
+
+.sidenav ul li:hover {
+  background-color: rgb(96, 96, 50);
+}
+
+.dropdown-trigger {
+  cursor: default;
+  color: white;
+  background-color: rgba(255, 255, 0, 0) !important;
+}
+
+.dropdown-trigger:hover {
+  color: black;
+  background-color: rgba(255, 255, 0, 0.7) !important;
+  transition-property: color;
+  transition-duration: 0.25s;
+}
+
 
 #nav-dropdown li:hover {
   background-color: rgba(255, 255, 0, 0.8);
 }
 
+#nav-dropdown li a {
+  color: white;
+  transition-property: color;
+  transition-duration: 0.25s;
+  font-size: 14px;
+}
+
+#nav-dropdown li a:hover {
+  color: black;
+}
+
 #nav-dropdown {
   background-color:  rgba(0, 0, 0, 0);
   box-shadow: none!important;
-}
-
-#nav-dropdown li a {
-  color: white;
-  font-size: 14px;
 }
 
 body {
