@@ -17,8 +17,7 @@
     <title>News | BCA Math Team</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- CSS  -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="/css/news.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -33,9 +32,16 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/updates">Updates</a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="nav-dropdown">Resources <i
+                                class="material-icons right">arrow_drop_down</i></i></a>
+                        <ul id="nav-dropdown" class="dropdown-content" tabindex="0">
+                            <li tabindex="0" class="white-text"><a href="/info">Contest Prep</a></li>
+                            <li tabindex="0"><a href="/archive">Archive</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/news">News</a></li>
                     <li><a href="/schedule">Schedule</a></li>
-                    <li><a href="/archive">Archive</a></li>
                 </ul>
 
 
@@ -46,9 +52,10 @@
             <li><a href="/" class="white-text">Home</a></li>
             <li><a href="/about" class="white-text">About</a></li>
             <li><a href="/updates" class="white-text">Updates</a></li>
+            <li><a href="/info" class="white-text">Contest Prep</a></li>
+            <li><a href="/archive" class="white-text">Archive</a></li>
             <li><a href="/news" class="white-text">News</a></li>
             <li><a href="/schedule" class="white-text">Schedule</a></li>
-            <li><a href="/archive" class="white-text">Archive</a></li>
         </ul>
     </header>
     <main>
@@ -58,9 +65,15 @@
             <img src="images/wmtc_awards.jpg" alt="2018 WMTC Awards">
         </div>
     </div> -->
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="images/wmtc_awards.jpg" alt="WMTC Awards">
+            </div>
+        </div>
         <div class="container">
-            <h3>Historical Results and Awards</h3>
-
+            <h3><i class="material-icons" style="font-size: 1.2em;">flag</i> Historical Results and Awards</h3>
+        </div>
+        <div class="container">
             <h5>American Mathematics Competitions (AMC/AHSME, AIME, USAMO)</h5>
 
             <p>The BCA Math Team has won the Charles T. Salkind
@@ -98,20 +111,25 @@
                 Sameer Pai, Greg Pylypovych, and Siwen (Simon) Sun joined Sebastian in taking the junior USAJMO.
             </p>
         </div>
-        <!-- FIND GOOD PICTURES!!! -->
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="images/wmtc_awards.jpg" alt="WMTC Awards">
-            </div>
+        <div class="slider">
+            <ul class="slides">
+                <li><img src="/images/t1_reduced.jpg"></li>
+                <li><img src="/images/t2_reduced.jpg"></li>
+                <li><img src="/images/t3_reduced.jpg"></li>
+            </ul>
         </div>
+        <p class="center-align">Above: 2019 10th World Mathematics Team Championships in Seoul, South Korea</p>
         <div class="container">
-            <h5>United States IMO Team</h5>
+            <h5>International Mathematical Olympiad</h5>
 
             <p>The end result of the AMC series is the selection of the US Olympic Math Team.
                 Hyunsoo Kim was a member of the 2005 US Team, and won a Silver Medal at the 2005 IMO. Ryan Alweiss
                 won a
                 gold medal as part of the 2015 US Team, which won the competition for the first time in over two
                 decades.</p>
+
+            <p>Furthermore, congratulations to Sebastian Jeon for representing Canada in the 2019 IMO and winning a
+                bronze medal.</p>
 
             <h5>American Regions Math League</h5>
             <div class="row valign-wrapper hide-on-small-only">
@@ -185,38 +203,38 @@
                 for top overall school, and has had a student in the top three individuals each time.</p>
 
 
-            <h5>World Math Team Championships</h5>
-
-            <p>At the 2016 WMTC in Inchon, South Korea, two teams from BCA finished second
-                and third place in the Advanced Division. David Song, Sumin Olivia Lee, Sunay Joshi, and Andrew Sun
-                received individual gold medals, with David placing third place in the Advanced Division.</p>
-
             <h5>Other</h5>
-            <div class="row valign-wrapper hide-on-med-and-down">
-                <p class="col s10">Other trips the Math Team has taken include Johns Hopkins, Stanford, Berkeley,
-                    and
-                    trips to the World
-                    Math
-                    Team Championship (Beijing, 2013; Seoul, 2016; Bulgaria, 2018)</p>
-                <p class="col s2"><img src="images/Math_championship.jpg" alt="Beijing 2013"
-                        class="responsive-img materialboxed"></p>
-            </div>
-            <p class="hide-on-large-only">Other trips the Math Team has taken include Johns Hopkins, Stanford,
+            <p>Other trips the Math Team has taken include Johns Hopkins, Stanford,
                 Berkeley,
                 and
                 trips to the World
                 Math
                 Team Championship (Beijing, 2013; Seoul, 2016; Bulgaria, 2018)</p>
+
+            <div class="center-align hide-on-med-and-down show-on-large"> <iframe width="50%" height="400px"
+                    src="https://www.youtube.com/embed/vSVIq3SfkdY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+
+            <div class="center-align show-on-medium-and-down hide-on-large-only">
+                <iframe width="100%" height="300px"
+                    src="https://www.youtube.com/embed/vSVIq3SfkdY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <br>
+            <br>
+            <br>
         </div>
     </main>
     <footer class="page-footer black lighten-1">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col l6 hide-on-med-and-down">
                     <a href="https://bcts.bergen.org/index.php/bca-home"><img src="/images/bca_logo.png" alt="BCA Logo"
                             height="130px"></a>
                 </div>
-                <div class="col l3 s12">
+                <div class="col l3 s6">
                     <h5 class="yellow-text">Connect</h5>
                     <ul style="text-decoration: underline;">
                         <li><a class="white-text" href="http://www.bergen.org/bcamathteam">BCA Math Team</a></li>
@@ -227,7 +245,7 @@
                                 Facebook page</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
+                <div class="col l3 s6">
                     <h5 class="yellow-text">Contact</h5>
                     <ul class="white-text" style="text-decoration: underline;">
                         <li><a class="white-text" href="mailto:micabra@bergen.org">Dr. Michael Abramson</a></li>

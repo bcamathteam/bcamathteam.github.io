@@ -1,6 +1,28 @@
 nav ul li:hover {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.7);
 }
+
+#nav-dropdown li {
+  background-color: black;
+}
+
+#nav-dropdown li a {
+  color: white;
+  font-size: 14px;
+}
+.material-icons{
+  display: inline-flex;
+  vertical-align: bottom;
+}
+
+.dropdown-trigger {
+  cursor: default;
+}
+
+#nav-dropdown li:hover {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
 
 #sidenav-overlay {
   z-index: 9
@@ -10,7 +32,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: "Computer Modern Sans", sans-serif;
+  font-family: "Computer Modern Bright", sans-serif;
 }
 
 main {

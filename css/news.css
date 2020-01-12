@@ -1,5 +1,5 @@
 nav ul li:hover {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.7);
 }
 
 #sidenav-overlay {
@@ -10,7 +10,24 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: "Computer Modern Sans", sans-serif;
+  font-family: "Computer Modern Bright", sans-serif;
+}
+
+#nav-dropdown li {
+  background-color: black;
+}
+
+#nav-dropdown li a {
+  color: white;
+  font-size: 14px;
+}
+
+.dropdown-trigger {
+  cursor: default;
+}
+
+#nav-dropdown li:hover {
+  background-color: rgba(255, 255, 0, 0.8);
 }
 
 main {
@@ -25,10 +42,25 @@ main {
   cursor: pointer;
 }
 
-textarea.materialize-textarea{min-height: 6rem;}
+.slider .indicators .indicator-item.active {
+  background-color: #ffff00 !important;
+}
+
+textarea.materialize-textarea {
+  min-height: 6rem;
+}
 
 .update-link:hover {
   background: rgba(208, 208, 208, 0.5);
+}
+
+.material-icons {
+  display: inline-flex;
+  vertical-align: bottom;
+}
+
+.parallax-container {
+  height: 400px;
 }
 
 .update-link {

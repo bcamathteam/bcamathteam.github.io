@@ -1,0 +1,83 @@
+nav ul li:hover {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+#sidenav-overlay {
+  z-index: 9
+}
+
+.material-icons{
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Computer Modern Bright", sans-serif;
+}
+
+h3 {
+  font-family: "Computer Modern Bright", sans-serif;
+}
+
+#nav-dropdown li {
+  background-color: black;
+}
+
+.table-of-contents a:hover {
+  border-left: 1px solid #000000 !important;
+}
+
+.table-of-contents a.active {
+  border-left: 2px solid #000000 !important;
+  font-weight: bold;
+}
+
+#nav-dropdown li a {
+  color: white;
+  font-size: 14px;
+}
+
+.dropdown-trigger {
+  cursor: default;
+}
+
+#nav-dropdown li:hover {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.update-link:hover {
+  background: rgba(208, 208, 208, 0.5);
+}
+
+.update-link {
+  transition: background 0.3s ease;
+}
+
+ul.table-of-contents a.active {
+  color:black;
+}
+
+.toc-wrapper {
+  position: relative;
+  margin-top: 100px;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}

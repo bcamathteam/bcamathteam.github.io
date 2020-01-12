@@ -1,32 +1,50 @@
 nav {
-    z-index: 10;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0)
+  z-index: 10;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .no-shadows {
-    box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #ffff00 !important;
 }
 
 nav ul li:hover {
-    background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.7);
 }
 
 .sidenav ul li:hover {
-    background-color: yellow;
+  background-color: yellow;
+}
+
+#nav-dropdown li:hover {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
+#nav-dropdown {
+  background-color:  rgba(0, 0, 0, 0);
+  box-shadow: none!important;
+}
+
+#nav-dropdown li a {
+  color: white;
+  font-size: 14px;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: "Computer Modern Sans", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Computer Modern Bright", sans-serif;
 }
 
 #sidenav-overlay {
-    z-index: 9
+  z-index: 9
 }
 
 .slides img {
-    filter: brightness(40%);
+  filter: brightness(40%);
 }

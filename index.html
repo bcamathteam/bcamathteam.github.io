@@ -16,9 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home | BCA Math Team</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-    <!-- CSS  -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="/css/index.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -33,9 +31,17 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/updates">Updates</a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="nav-dropdown">Resources <i
+                                class="material-icons right">arrow_drop_down</i></i></a>
+                        <ul id="nav-dropdown" class="dropdown-content" tabindex="0">
+                            <li tabindex="0"><a href="/info">Contest Prep</a></li>
+                            <li tabindex="0"><a href="/archive">Archive</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/news">News</a></li>
                     <li><a href="/schedule">Schedule</a></li>
-                    <li><a href="/archive">Archive</a></li>
+                    <!-- <li><a href="/archive">Archive</a></li> -->
                 </ul>
 
 
@@ -46,9 +52,11 @@
             <li><a href="/" class="white-text">Home</a></li>
             <li><a href="/about" class="white-text">About</a></li>
             <li><a href="/updates" class="white-text">Updates</a></li>
+            <li><a href="/info" class="white-text">Contest Prep</a></li>
+            <li><a href="/archive" class="white-text">Archive</a></li>
             <li><a href="/news" class="white-text">News</a></li>
             <li><a href="/schedule" class="white-text">Schedule</a></li>
-            <li><a href="/archive" class="white-text">Archive</a></li>
+            <!-- <li><a href="/archive" class="white-text">Archive</a></li> -->
         </ul>
     </header>
     <main>

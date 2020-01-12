@@ -29,7 +29,8 @@
             });
             var latest_date = table_rows[0].date;
             table_rows.forEach(function (item, index) {
-                $(".handouts-table tbody").append(item.data + (item.date == latest_date ? "&nbsp;&nbsp;<span class=\"new badge\"></span>" : "") + "</td></tr>");
+                // $(".handouts-table tbody").append(item.data + (item.date == latest_date ? "&nbsp;&nbsp;<span class=\"new badge\"></span>" : "") + "</td></tr>");
+                $(".handouts-table tbody").append(item.data + "</td></tr>");
             });
             $(".handouts-table tbody > tr").each(function () {
                 var link = $(this).find("a");
