@@ -34,6 +34,10 @@ body {
   background-color: black;
 }
 
+.stats-heading {
+  font-family: 'Computer Modern Serif', serif;
+}
+
 #nav-dropdown li:hover {
   background-color: rgba(255, 255, 0, 1);
 }
@@ -41,6 +45,13 @@ body {
   color: black;
   transition-property: color;
   transition-duration: 0.25s;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
 }
 
 main {
