@@ -33,7 +33,8 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/updates">Updates</a></li>
                     <li>
-                        <a class="dropdown-trigger" data-target="nav-dropdown">Resources <i class="material-icons right">arrow_drop_down</i></i></a>
+                        <a class="dropdown-trigger" data-target="nav-dropdown">Resources <i
+                                class="material-icons right">arrow_drop_down</i></i></a>
                         <ul id="nav-dropdown" class="dropdown-content" tabindex="0">
                             <li tabindex="0" class="white-text"><a href="/info">Contest Prep</a></li>
                             <li tabindex="0"><a href="/archive">Archive</a></li>
@@ -65,99 +66,23 @@
         <div class="container">
             <h3><i class="material-icons" style="font-size: 1.2em;">archive</i> Archive</h3>
 
-            This archive will contain all past handouts and other materials from meetings.
-
-            <h4>Handouts</h4>
+            This archive will contain all past handouts, contests and other materials from meetings.
 
             <blockquote>
-                Advanced handouts are geared toward experienced students in math competitions (preferably AIME
-                qualification).
+                Please wait for the Google Drive folders to load.
             </blockquote>
 
-            <div class="row admin-panel hide">
-                <div id="adminmodal" class="modal">
-                    <div class="modal-content">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input type="text" id="update-title" class="validate">
-                                <label for="update-title">Title</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="update-date" type="text" class="datepicker">
-                                <label for="update-date">Date</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <label>
-                                    <input id="advanced-checked" type="checkbox" class="filled-in" />
-                                    <span>Advanced</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="file-field input-field col s12">
-                                <div class="btn">
-                                    <i class="material-icons">attach_file</i>
-                                    <input id="update-files" type="file">
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Attach file here">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s12"><span>Please do not attach a file which has previously been uploaded
-                                    with the same name.</span></div>
-                        </div>
-                        <div class="row">
-                            <div class="col s12">
-                                <span class="alert hide"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" id="admin-submit" type="submit"
-                            class="waves-effect waves-green btn-flat">Submit</a>
-                        <a href="#!" id="admin-close" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-                    </div>
+            <div class="row">
+                <div class="col s6">
+                    <h4>Handouts</h4>
+                    
+                    <iframe src="https://drive.google.com/embeddedfolderview?id=1R0Kf6bVuG20iHN6ukwcypofUQn1xRimD#list" style="width:100%; height:400px; border:0;"></iframe>
                 </div>
-                <div id="adminmodal-delete" class="modal">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col s12 input-field">
-                                    <select></select>
-                                    <label>Select handout to delete</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" id="admin-delete" type="submit"
-                            class="waves-effect waves-green btn-flat">Delete</a>
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
+                <div class="col s6">
+                    <h4>Past Contests</h4>
+
+                    <iframe src="https://drive.google.com/embeddedfolderview?id=17Q2MUSuIGT2VboH0JuFWC11xi6NEMbwQ#list" style="width:100%; height:400px; border:0;"></iframe>
                 </div>
-                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal">Add handout</a>
-                <a class="waves-effect waves-light btn modal-trigger" href="#adminmodal-delete">Delete handout</a>
-            </div>
-            <table class="handouts-table striped">
-                <thead>
-                    <tr>
-                        <td>Date</td>
-                        <td>Title</td>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-            <div class="col-md-12 center text-center pagination-div">
-                <!-- <span class="left" id="total_reg"></span> -->
-                <ul class="pagination pager" id="myPager"></ul>
-            </div>
-            <div class="progress">
-                <div class="indeterminate"></div>
             </div>
 
             <h4>JHMMC</h4>
@@ -259,8 +184,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/init.js"></script>
-    <script type="text/javascript" src="/js/pagination.js"></script>
-    <script src="/js/archive.js"></script>
+    <!-- <script type="text/javascript" src="/js/pagination.js"></script> -->
+    <!-- <script src="/js/archive.js"></script> -->
 </body>
 
 </html>
