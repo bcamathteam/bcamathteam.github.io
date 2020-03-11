@@ -19,7 +19,7 @@ nav ul li a:hover {
 }
 
 .dropdown-trigger {
-  cursor: default;
+  
   color: white;
   background-color: black;
 }

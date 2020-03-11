@@ -14,13 +14,13 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Archive | BCA Math Team</title>
+    <title>Resources | BCA Math Team</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css" href="/css/fonts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/archive.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/info.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -33,8 +33,8 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/updates">Updates</a></li>
                     <li>
-                        <a class="dropdown-trigger" data-target="nav-dropdown">Resources <i
-                                class="material-icons right">arrow_drop_down</i></i></a>
+                        <a class="dropdown-trigger" data-target="nav-dropdown" href="/resources">Resources <i
+                                class="material-icons right">arrow_drop_down</i></a>
                         <ul id="nav-dropdown" class="dropdown-content" tabindex="0">
                             <li tabindex="0" class="white-text"><a href="/info">Contest Prep</a></li>
                             <li tabindex="0"><a href="/archive">Archive</a></li>
@@ -61,45 +61,58 @@
     </header>
     <main>
         <!-- FIND GOOD PICTURES!!! -->
-        <div class="parallax-container">
-            <div class="parallax"><img src="/images/mt_members_papers.JPG" alt="Math team papers"></div>
-        </div>
         <div class="container">
-            <h3><i class="material-icons" style="font-size: 1.2em;">archive</i> Archive</h3>
+            <div class="row">
+                <h3>Resources</h3>
 
-            This archive will contain all past handouts, contests and other materials from meetings.
-
-            <blockquote>
-                Please wait for the Google Drive folders to load.
-            </blockquote>
-
+                On weekend meetings, members take mock or official math contests, attend lectures on various topics by
+                our veteran math team members, or listen to guest speakers. Ultimately, however, improvement comes from
+                <em>solving lots of problems</em> in your free time! We encourage members to review past contest
+                problems that they were unable to solve in the time frame, and attempt problem sets that accompany our
+                lecture notes. We bring these resources to you on this website through the links below (or in the
+                dropdown menu "Resources" above in the navigation bar).
+            </div>
             <div class="row">
                 <div class="col s12 m6">
-                    <h4>Handouts</h4>
-                    
-                    <iframe src="https://drive.google.com/embeddedfolderview?id=1R0Kf6bVuG20iHN6ukwcypofUQn1xRimD#list" style="width:100%; height:300px; border:0;"></iframe>
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="/info"><img src="images/maa_amc.png"></a>
+                        </div>
+                        <div class="card-content">
+
+                            <span class="card-title black-text">Contest Preparation</span>
+                            <p>This page will provide a wide assortment of links to outside resources that students can also utilize in their preparation for the main sequence of math contests by the Mathematical Association of America (MAA): AMC/AIME/USA(J)MO.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="/info">Visit</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col s12 m6">
-                    <h4>Past Contests</h4>
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="/archive"><img src="images/pile_of_math_papers.jpg"></a>
+                        </div>
+                        <div class="card-content">
 
-                    <iframe src="https://drive.google.com/embeddedfolderview?id=17Q2MUSuIGT2VboH0JuFWC11xi6NEMbwQ#list" style="width:100%; height:300px; border:0;"></iframe>
+                            <span class="card-title black-text">Archive</span>
+                            <p>This page contains links to .pdf files of lecture notes (with problem sets) that our veteran math team members wrote and compiled, previously administered mock contests or released contest papers from outside organizations, and solutions to problems. <span style="font-weight: bold;">All math team members should check this page regularly for newly released documents during downtime.</span></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="/archive">Visit</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <h4>JHMMC</h4>
-
-            In addition to our handouts, the math team is also responsible for writing all the problems to the Joe
-            Holbrook Memorial Math Competition (JHMMC), an annual math competition for elementary and middle schoolers
-            in 4th to 8th grade. To view our past written problems and solutions, please visit the <a
-                class="handout-link" href="https://holbrook.bergen.org/archive">Archive</a> page of the <a
-                href="https://holbrook.bergen.org/" class="handout-link">JHMMC website</a>.
+        </div>
+        </div>
         </div>
         <br>
         <br>
         <br>
-        <br>
+        </div>
     </main>
-    <footer class="page-footer black lighten-1">
+    <footer class="page-footer black lighten-1" id="contest-prep-footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 hide-on-med-and-down">
@@ -160,8 +173,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/init.js"></script>
-    <!-- <script type="text/javascript" src="/js/pagination.js"></script> -->
-    <!-- <script src="/js/archive.js"></script> -->
 </body>
 
 </html>
