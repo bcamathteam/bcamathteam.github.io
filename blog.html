@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="/css/archive.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/blog.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -62,39 +63,14 @@
         </ul>
     </header>
     <main>
-        <!-- FIND GOOD PICTURES!!! -->
-        <div class="parallax-container">
-            <div class="parallax"><img src="/images/mt_members_papers.JPG" alt="Math team papers"></div>
-        </div>
         <div class="container">
-            <h3><i class="material-icons" style="font-size: 1.2em;">archive</i> Archive</h3>
+            <h3><i class="material-icons" style="font-size: 1.2em;">insert_comment</i> Blog</h3>
 
-            This archive will contain all past handouts, contests and other materials from meetings.
-
-            <blockquote>
-                Please wait for the Google Drive folders to load.
-            </blockquote>
-
-            <div class="row">
-                <div class="col s12 m6">
-                    <h4>Handouts</h4>
-                    
-                    <iframe src="https://drive.google.com/embeddedfolderview?id=1R0Kf6bVuG20iHN6ukwcypofUQn1xRimD#list" style="width:100%; height:300px; border:0;"></iframe>
-                </div>
-                <div class="col s12 m6">
-                    <h4>Past Contests</h4>
-
-                    <iframe src="https://drive.google.com/embeddedfolderview?id=17Q2MUSuIGT2VboH0JuFWC11xi6NEMbwQ#list" style="width:100%; height:300px; border:0;"></iframe>
+            <div class="container">
+                <div class="row" id="blog_posts">
                 </div>
             </div>
-
-            <h4>JHMMC</h4>
-
-            In addition to our handouts, the math team is also responsible for writing all the problems to the Joe
-            Holbrook Memorial Math Competition (JHMMC), an annual math competition for elementary and middle schoolers
-            in 4th to 8th grade. To view our past written problems and solutions, please visit the <a
-                class="handout-link" href="https://holbrook.bergen.org/archive">Archive</a> page of the <a
-                href="https://holbrook.bergen.org/" class="handout-link">JHMMC website</a>.
+        </div>
         </div>
         <br>
         <br>
@@ -163,7 +139,8 @@
     <script src="/js/materialize.js"></script>
     <script src="/js/init.js"></script>
     <!-- <script type="text/javascript" src="/js/pagination.js"></script> -->
-    <!-- <script src="/js/archive.js"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="/js/blog.js"></script>
 </body>
 
 </html>
