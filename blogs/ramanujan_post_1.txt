@@ -36,7 +36,7 @@ It might take some time to digest that dose of mathematical magic, but once you 
 
 \(\textbf{Exercise 3:}\) Those of you who know/are learning calculus, take a stab at the following analysis question: when does the infinite nested radical \(\sqrt{a_1 + b_1\sqrt{a_2 + b_2\sqrt{a_3 + b_3\sqrt{\dots}}}}\) converge?
 
-\(\textbf{Exercise 4:}\) In the above post, we hinted at how to calculuate... Let's take this one step further, by introducing the following \(\textbf{infinite continued fraction}\): \[1+{1\over 1+{1\over 1+{1\over 1+...}}}.\] Find its value, and compare your answer to \(\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{\ldots}}}}\). Any observations?
+\(\textbf{Exercise 4:}\) In the above post, we hinted at how to calculate \(\sqrt{1 + \sqrt{1 + \sqrt{1 + \sqrt{\dots}}}}\). Let's take this one step further, by introducing the following \(\textbf{infinite continued fraction}\): \[1+{1\over 1+{1\over 1+{1\over 1+...}}}.\] Find its value, and compare your answer to \(\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{\ldots}}}}\). Any observations?
 
 That's it for this post! Feel free to write to us (sunjos20@bergen.org and sampai20@bergen.org) with any questions, comments, or topic requests. Next post, we'll be discussing some of Ramanujan's results at the intersection of elementary algebra and number theory: on composing cubic forms. As a teaser, give the following problem a try.
 
