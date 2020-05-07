@@ -54,7 +54,7 @@ function waitForElementToDisplay(selector, time) {
                     }
                 }).then(function () {
                     $("#blog_posts").append(`<div id="modal` + current_id + `" class="modal full"><div class="modal-content"><div class="container"><h4>` + title + `</h4><h6>By ` + author + `</h6> <i class="material-icons">access_time</i> Updated ` + date + `<br><br>` + content + `</div></div><div class="modal-footer"><div class="container"><a href="#!" class="modal-close waves-effect waves-green btn orange lighten-3 black-text">Close</a></div></div></div>`);
-                    $("#blog_posts").append(`<div class="col s12 m6"><div class="card orange lighten-3 z-depth-2 hoverable"><div class="card-content black-text"><span class="card-title">` + title + `</span><h6>By ` + author + `</h6><p><i class="material-icons">access_time</i> Updated ` + date + `</p><br><p>` + preview + `</p></div><div class="card-action"><a class="black-text modal-trigger" href="#modal` + current_id + `">Read more</a></div></div></div>`)
+                    $("#blog_posts").append(`<div class="col s12"><div class="card orange lighten-3 z-depth-2 hoverable"><div class="card-content black-text"><span class="card-title">` + title + `</span><h6>By ` + author + `</h6><p><i class="material-icons">access_time</i> Updated ` + date + `</p><br><p>` + preview + `</p></div><div class="card-action"><a class="black-text modal-trigger" href="#modal` + current_id + `">Read more</a></div></div></div>`)
                 });
             });
             for (var m = 0; m < list_of_files.length; m++) {

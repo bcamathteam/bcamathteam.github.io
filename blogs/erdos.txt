@@ -1,0 +1,58 @@
+Title
+Great Mathematicians: Paul Erdős
+Date
+May 6, 2020
+Author
+Simon Sun, Peggy Yang
+Preview
+Check out the next addition to our Great Mathematicians series - this time featuring Paul Erdős!
+Content
+Hello! We hope everyone is well and healthy. The next installment of this series will introduce a renowned Hungarian mathematician named \(\textbf{Paul Erdős}\), who was one of the most prolific of the 20th century. Much of his work focused on discrete mathematics, but he also made many contributions to graph theory, number theory, approximation theory, et cetera. He published over 1,500 mathematical papers over the span of his career, collaborating with over 500 other mathematicians.
+
+<div class="row"> <div class="col offset-s3 s6 center-align"> <img class="responsive-img" src="images/erdos.jpg"> </div> </div>
+\(\textbf{History}\) - Paul Erdős was born in Budapest, Austria-Hungary, on 26 March 1913 to parents who were mathematics teachers. His father was held captive in Siberia until 1920 as a prisoner of war, and his mother had to work long hours to support their family. As a result, as a child Erdős was often left alone at home and perused through his parents' mathematics books. By the age of four, he could calculate in his head the number of seconds someone had lived given their age. Erdős' parents were his primary source of his early mathematical education. When he was 16, his father introduced to him the subjects of infinite series and set theory, which would become his favorite subjects.
+
+Erdős entered the University of Budapest at age 16 and proved the Bertrand–Chebyshev theorem at age 20. He obtained his doctorate in mathematics at 21 under Lipót Fejér, who was also the thesis advisor for John von Neumann and George Pólya. In 1938, Erdős accepted a position at Princeton University, his first American position. For the next several decades Erdős travelled back and forth between the US and Hungary. Even during the last decades of his life, he received at least fifteen honorary doctorates.
+
+Paul Erdős passed away on September 20, 1996 in Warsaw, Poland from a heart attack. Hours before his death, he solved a geometry problem at a conference in Warsaw. Erdős never married and had no children. He is buried next to his parents' graves in Budapest, with an epitaph that reads "Végre nem butulok tovább" -- "I've finally stopped getting dumber."
+
+\(\textbf{Trivia}\) - As a tribute to Erdős' vast mathematical output and extensive collaboration, the \(\textbf{Erdős Number}\) is defined as the number of steps in the shortest path between a mathematician and Erdős in co-authorship. According to an  <a href="https://mathscinet.ams.org/mathscinet/collaborationDistance.html">online Erdős number calculator</a>, Dr. Abramson has a Erdős number of 4 and Dr. Nevard has a Erdős number of 3.
+
+Erdős had quite an eccentric personality. He was known to live frugally and donate most of his earnings and awards to charitable causes, keeping just enough to get by. He spent most of his life travelling between conferences, universities, and other mathematicians' residences -- his belongings could fit into a suitcase. Although he was an agnostic atheist, he often spoke about "The Book", in which he believed God had written down the most elegant proofs of all mathematical theorems. 
+
+In addition, his eccentric personality was complemented by a peculiar vocabulary. For example:
+</p><ul class="collection">
+<li class="collection-item">Children were referred to as "epsilons". </li>
+<li class="collection-item">People who stopped doing mathematics had "died", while people who died had "left". </li>
+<li class="collection-item">To give a mathematical lecture was "to preach". </li>
+<li class="collection-item">Music (except classical music) was "noise". </li>
+<li class="collection-item">Women were "bosses" who "captured" men as "slaves" by marrying them. Divorced men were "liberated". </li>
+</ul><p>
+
+\(\textbf{Mathematics}\) - In this section, we focus on one particular theorem of Erdős: the \(\textbf{Erdős–Szekeres Theorem}\).
+
+\(\textbf{Theorem:}\) Given \(r\) and \(s\), any sequence of distinct real numbers with length at least \((r - 1)(s - 1) + 1\) contains a monotonically increasing subsequence of length \(r\) or a monotonically decreasing subsequence of length \(s\).
+
+\(\textit{Proof}.\) Suppose we have a sequence of length \((r - 1)(s - 1) + 1\). Given a number \(n_i\) in the sequence, let \(a_i\) be the length of the longest monotonically increasing subsequence ending with \(n_i\) and \(b_i\) be the length of the longest monotonically decreasing subsequence ending with \(n_i\). Label each \(n_i\) with the pair \((a_i, b_i)\).
+
+\(\textbf{Lemma.}\) Each number of the sequence is labeled with a different pair. 
+
+Let \(i  <  j\) and \(n_i  <  n_j\). Then we claim that \(a_i  <  a_j\). Consider the monotonically increasing sequence of length \(a_i\) ended at \(n_i\). Since \(n_i < n_j\), one can add \(n_j\) to the sequence, so \(a_i+1 \leq a_j\). Therefore, \(a_i < a_j\). Similarly, if \(n_i > n_j\) then \(b_i < b_j\). Since the sequence consists of distinct integers, one does not consider the case where \(n_i=n_j\). Therefore, for any \(i,j\) either \(a_i\neq a_j\) or \(b_i\neq b_j\). Therefore, each number of the sequence must be labeled with a different pair.
+
+But there are only \((r - 1)(s - 1)\) possible labels if \(a_i\) is at most \(r - 1\) and \(b_i\) is at most \(s - 1\). By the Pigeonhole Principle, there must exist a value of \(i\) such that either \(a_i > r-1\) or \(b_i > r-1\). Therefore, this sequence must contain a monotonically increasing subsequence of length \(r\) or a monotonically decreasing subsequence of length \(s\).
+
+\(\textbf{Exercises}\) - Here are some of the more popular problems that Erdős liked to ask.
+
+\(\textbf{Exercise 1:}\) If \(n+1\) integers are chosen from the first \(2n\) integers, prove that there will always be two that are relatively prime.  
+
+\(\textbf{Exercise 2:}\) If \(n+1\) integers are chosen from the first \(2n\) integers, there will always be two that divide each other.
+
+Please try these exercises! If you would like a solution or a hint to these exercises feel free to email us at peiyan20@bergen.org  or siwsun21@bergen.org!
+
+Erdős is known for placing bounties on questions that he is unable to solve himself. These bounties range anywhere from 25 to 3,000 US dollars.
+
+\(\textbf{Problem 1:}\) The Erdős–Straus conjecture states that for all integers \(n \geq 2\), the rational number \(4/n\) can be expressed as the sum of three positive unit fractions \((\text{fractions of the form } 1/k)\). This result has been verified for \(n<10^{17}\), but the result has not been proven.
+
+\(\textbf{Problem 2:}\) The Erdős-Turán Conjecture states that if the sum of reciprocals of a set of integers diverges, then that set contains arbitrarily long arithmetic progressions. This problem has a $5000 cash prize!
+
+For more problems with monetary rewards, please see <a href="https://mathoverflow.net/a/66219">here</a>.
