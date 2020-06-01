@@ -1,0 +1,42 @@
+Title
+Great Mathematicians: Pierre de Fermat
+Date
+May 27, 2020
+Author
+Autumn Shin
+Preview
+Learn about another one of the Great Mathematicians in history: Pierre de Fermat!
+Content
+Hi everyone! We hope everyone is doing well and staying safe. The next mathematician we will be discussing is \(\textbf{Pierre de Fermat}\), a French mathematician of the 17th century who is often acknowledged as the founder of modern number theory. Throughout his mathematical career, Fermat developed many conjectures and theorems in number theory and also did work that led to early forms of analytic geometry, calculus, and probability theory.
+
+<div class="row"> <div class="col offset-s3 s6 center-align"> <img class="responsive-img" src="images/fermat.jpg"> </div> </div>
+
+\(\textbf{History}\)
+
+Pierre de Fermat was born in late 1607 or early 1608 in Beaumont-de-Lomagne, France to aristocratic parents. Fermat's education and past are still rather obscure; he attended a local Franciscan school during his youth and later likely studied civil law at the University of Orléans. He was fluent in several languages including classical Greek, Latin, Italian, Spanish, and Occitan and additionally held interests in classical literature and ancient science and mathematics. His mother had passed when he was only six years old and his father when he was twenty, leaving Fermat with a large inheritance. However, Fermat continued working as an attorney and at 22 earned a senior legal position in the High Court of Toulouse. Mathematics remained a hobby that he enjoyed outside of his main work, and he did not publish his discoveries, but only discussed his results with his friends and fellow mathematicians.
+
+Fermat began to gain acknowledgement of his mathematical work as mathematician Marin Mersenne in Paris encouraged other mathematicians to communicate more openly and asked for details about Fermat's work. Fermat communicated with Mersenne about his discovery of a method of finding the maximum and minimum points of curves, finding the tangent of a given point on a curve, and finding the area under a curve, which later guided Isaac Newton in founding calculus. However, his most significant work was in his favorite field, now called number theory. Inspired by the work of the Greek mathematician Diophantus, Fermat wrote his ideas and theorems in the margins of Diophantus' book <em>Arithmetica</em>, including one of his most famous theorems, Fermat's Last Theorem. Although this was not the last theorem he had written, it was one of the last of his theorems to be discovered by the public; his son did not find it until five years after Fermat's death in his notes. However, he had not included a proof of this theorem, instead famously writing in his notes, <a href="https://www.famousscientists.org/pierre-de-fermat/">"I have discovered a truly remarkable proof which this margin is too small to contain."</a> This theorem was not proved for centuries of futile attempts until finally proved in 1995 by Andrew Wiles. Fermat died at the age of 57 or 58 on January 12, 1665 in Castres, France, and the cause of his death is unknown.
+
+\(\textbf{Fermat's Little Theorem}\)
+
+\(\textbf{Fermat's Little Theorem}\) states that given a prime \(p\), for any integer \(a\), \[a^p\equiv a \pmod{p}.\]
+<em>Proof.</em> One method of proving this theorem is by utilizing inverses in modular arithmetic. Let \(S\) be the set \(\{1, 2, 3, \cdots, p-1\}\). We claim that for some integer \(a\), the set \(a\cdot S\), consisting of the product of the elements of \(S\) and \(a\) taken mod \(p\) is a permutation of \(S\). This is written $$S\equiv \{1a, 2a, \cdots (p-1)a\} \pmod{p}.$$
+\quad As there are no factors of \(p\) in any of these elements, none of these elements are divisible by \(p\). We know that both \(S\) and \(a\cdot S\) have \(p-1\) elements, and that none of these elements are equivalent to \(0 \pmod{p}\). There are \(p\) possible values that a number could be equivalent to in \(\pmod{p}\); \(0, 1, 2, \cdots, p-1\). Since none of the elements in \(a\cdot S\) are equivalent to \(0 \pmod{p}\), if we can show that each element is distinct \(\pmod{p}\), it would follow that \(a\cdot S \equiv S\), since the elements of \(S\) are \(1, 2, \cdots p-1 \pmod{p}\). 
+
+Assume that two elements \(a_i\) and \(a_j\) for distinct \(i\), \(j\) in \(a\cdot S\) are equivalent \(\mod{p}\), so \(ai\equiv aj \pmod{p}\). We multiply both sides by \(a^{-1} \mod{p}\), which yields \(i\equiv j \pmod{p}\). Since \(1\le i,j \le p-1\), this must mean that \(i=j\), which is a contradiction. Thus for each \(a_i\) and \(a_j\), \(a_i \not\equiv a_j \pmod{p}\). This yields that the elements of \(a\cdot S\) are indeed a permutation of the elements of \(S \pmod{p}\). Thus, $$1a\cdot 2a \cdots (p-1)a \equiv 1 \cdot 2 \cdots (p-1) \pmod{p}.$$ Dividing by \(1, 2, 3, \cdots p-1\) on both sides, we are left with \(a^{p-1}\equiv 1 \pmod{p}\). Multiplying each side by \(a\) yields \(a^p \equiv a \pmod{p}\). 
+
+\(\textbf{Exercises} \)
+
+These are some exercises in number theory based on Fermat's work. The later exercises are challenging; don't worry if you can't solve them right away! If you need any help, feel free to email me at <a href="mailto:arrshi22@bergen.org">arrshi22@bergen.org</a>.
+
+\(\textbf{Exercise 1}:\) Prove Fermat's Little Theorem using induction on \(a\). (\(\textit{Hint:}\) The binomial theorem may be helpful!)
+
+\(\textbf{Exercise 2}:\) Compute \(6^{27} \pmod{5}\), \(8^{42} \pmod{11}\), and \(10^{51} \pmod{7}\). 
+
+\(\textbf{Exercise 3}:\) One of Euler's conjectures was disproved in the 1960s by three American mathematicians when they showed there was a positive integer such that $$133^5+110^5+84^5+27^5=n^5.$$ Find the value of \(n\). (AIME 1989)
+
+\(\textbf{Exercise 4}:\) Determine the remainder when the expression \(2004^{{2003}^{{2002}^{2001}}}\) is divided by \(1000\). (Mildorf AIME 2)
+
+\(\textbf{Exercise 5}:\) If \(f(x)=x^{x^{x^{x}}}\), find the last two digits of \(f(17)+f(18)+f(19)+f(20).\) (2008 PUMaC NT A)
+
+\(\textbf{Exercise 6}:\) Let \(p\) and \(q\) be distinct primes. Prove that \(a^{pq}\equiv a \pmod{pq}.\)
