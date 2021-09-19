@@ -28,51 +28,14 @@
     </head>
 
     <body>
-        <header>
-            <nav class="black nav-extended" role="navigation">
-                <div class="nav-wrapper container"><a id="logo-container"
-                        href="/" class="brand-logo"><img
-                            src="/images/bca_logo.png" height="28px"> Math Team</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/updates">Updates</a></li>
-                        <li>
-                            <a class="dropdown-trigger"
-                                data-target="nav-dropdown" href="/resources">Resources
-                                <i
-                                    class="material-icons right">arrow_drop_down</i></a>
-                            <ul id="nav-dropdown" class="dropdown-content"
-                                tabindex="0">
-                                <li tabindex="0" class="white-text"><a
-                                        href="/info">Contest Prep</a></li>
-                                <li tabindex="0"><a href="/archive">Archive</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/news">News</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact">Contact</a></li>
+        <div id="header-placeholder">
 
-                    </ul>
-
-
-                    <a href="#" data-target="nav-mobile"
-                        class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                </div>
-            </nav>
-            <ul id="nav-mobile" class="sidenav black">
-                <li><a href="/" class="white-text">Home</a></li>
-                <li><a href="/about" class="white-text">About</a></li>
-                <li><a href="/updates" class="white-text">Updates</a></li>
-                <li><a href="/resources" class="white-text">Resources</a></li>
-                <li><a href="/info" class="white-text">Contest Prep</a></li>
-                <li><a href="/archive" class="white-text">Archive</a></li>
-                <li><a href="/news" class="white-text">News</a></li>
-                <li><a href="/blog" class="white-text">Blog</a></li>
-                <li><a href="/contact" class="white-text">Contact</a></li>
-
-            </ul>
-        </header>
+        </div>
+        <script>
+        $(function(){
+          $("#header-placeholder").load("header.html");
+        });
+        </script>
         <main>
             <!-- FIND GOOD PICTURES!!! -->
             <div style="width: 90%; margin: 0 auto;">
