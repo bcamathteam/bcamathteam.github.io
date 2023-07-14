@@ -53,3 +53,12 @@ main {
 .name {
   font-weight: bold;
 }
+
+.bulleted-list li {
+  list-style-type: disc !important;
+}
+
+.bulleted-list .indented {
+  margin-left: 20px;
+  list-style-type: circle !important;
+}
