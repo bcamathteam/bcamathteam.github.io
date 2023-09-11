@@ -62,3 +62,37 @@ main {
   margin-left: 20px;
   list-style-type: circle !important;
 }
+
+.tabs .tab a {
+  color: #000;
+}
+
+/*Black color to the text*/
+
+.tabs .tab a.active {
+  color: #000;
+}
+
+/*Text color on hover*/
+
+.tabs .tab a:hover {
+  color: #000;
+}
+
+/*Text color on hover*/
+
+.tabs .tab a:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Text color on hover*/
+
+.tabs .tab a:focus.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Text color on hover*/
+
+.tabs .indicator {
+  background-color: #000;
+}
